@@ -53,7 +53,13 @@ namespace Aula_54.Exercicio {
                         
                         break;
                     case 3:
-                        Tela.CadastrarMarca();
+                        try {
+                            Tela.CadastrarMarca();
+                        }
+                        catch (ModelException e) {
+                            Console.WriteLine(e.Message);
+                        }
+                            
                         break;
                     case 4:
                         try {
